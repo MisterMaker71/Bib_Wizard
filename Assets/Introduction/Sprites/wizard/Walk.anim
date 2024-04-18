@@ -20,7 +20,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0.855, y: 1.2, z: 0}
+        value: {x: 1.041, y: 1.099, z: -2}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -29,16 +29,16 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.083333336
-        value: {x: 1.136, y: 1.022, z: 0}
-        inSlope: {x: 3.03, y: -2.2020001, z: 0}
-        outSlope: {x: 3.03, y: -2.2020001, z: 0}
+        value: {x: 1.298, y: 0.943, z: -2}
+        inSlope: {x: 3, y: -2.3819997, z: 0}
+        outSlope: {x: 3, y: -2.3819997, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.16666667
-        value: {x: 1.36, y: 0.833, z: 0}
+        value: {x: 1.541, y: 0.702, z: -2}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -47,25 +47,25 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.25
-        value: {x: 1.317, y: 0.838, z: 0}
-        inSlope: {x: -1.0319996, y: 0.119999886, z: 0}
-        outSlope: {x: -1.0319996, y: 0.119999886, z: 0}
+        value: {x: 1.469963, y: 0.739, z: -2}
+        inSlope: {x: -1.302, y: 0.888, z: 0}
+        outSlope: {x: -1.302, y: 0.888, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.33333334
-        value: {x: 1.136, y: 1.006, z: 0}
-        inSlope: {x: -2.7720003, y: 2.1720004, z: 0}
-        outSlope: {x: -2.7720003, y: 2.1720004, z: 0}
+        value: {x: 1.324, y: 0.92, z: -2}
+        inSlope: {x: -2.573778, y: 2.1599998, z: 0}
+        outSlope: {x: -2.573778, y: 2.1599998, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.41666666
-        value: {x: 0.855, y: 1.2, z: 0}
+        value: {x: 1.041, y: 1.099, z: -2}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -75,7 +75,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: GameObject
+    path: Player/GameObject
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves:
@@ -92,9 +92,9 @@ AnimationClip:
     - time: 0.33333334
       value: {fileID: 21300000, guid: 426312ea16f4e4647af8f3f56408c28f, type: 3}
     - time: 0.41666666
-      value: {fileID: 21300000, guid: 426312ea16f4e4647af8f3f56408c28f, type: 3}
+      value: {fileID: 21300000, guid: f1f8e406d81606943a535e45a4a84acb, type: 3}
     attribute: m_Sprite
-    path: 
+    path: Player
     classID: 212
     script: {fileID: 0}
     flags: 2
@@ -106,7 +106,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1482111001
+      path: 3614694445
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -115,7 +115,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 0
+      path: 2679471955
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -129,7 +129,7 @@ AnimationClip:
     - {fileID: 21300000, guid: b359592c7266a2c48898ba2778f62bc0, type: 3}
     - {fileID: 21300000, guid: be96f55e072e3b3499212fe0d2f1155b, type: 3}
     - {fileID: 21300000, guid: 426312ea16f4e4647af8f3f56408c28f, type: 3}
-    - {fileID: 21300000, guid: 426312ea16f4e4647af8f3f56408c28f, type: 3}
+    - {fileID: 21300000, guid: f1f8e406d81606943a535e45a4a84acb, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -157,7 +157,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.855
+        value: 1.041
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -166,16 +166,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.083333336
-        value: 1.136
-        inSlope: 3.03
-        outSlope: 3.03
+        value: 1.298
+        inSlope: 3
+        outSlope: 3
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: 1.36
+        value: 1.541
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -184,25 +184,25 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
-        value: 1.317
-        inSlope: -1.0319996
-        outSlope: -1.0319996
+        value: 1.469963
+        inSlope: -1.302
+        outSlope: -1.302
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.33333334
-        value: 1.136
-        inSlope: -2.7720003
-        outSlope: -2.7720003
+        value: 1.324
+        inSlope: -2.573778
+        outSlope: -2.573778
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.41666666
-        value: 0.855
+        value: 1.041
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -213,7 +213,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: GameObject
+    path: Player/GameObject
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -223,7 +223,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1.2
+        value: 1.099
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -232,16 +232,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.083333336
-        value: 1.022
-        inSlope: -2.2020001
-        outSlope: -2.2020001
+        value: 0.943
+        inSlope: -2.3819997
+        outSlope: -2.3819997
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: 0.833
+        value: 0.702
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -250,25 +250,25 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
-        value: 0.838
-        inSlope: 0.119999886
-        outSlope: 0.119999886
+        value: 0.739
+        inSlope: 0.888
+        outSlope: 0.888
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.33333334
-        value: 1.006
-        inSlope: 2.1720004
-        outSlope: 2.1720004
+        value: 0.92
+        inSlope: 2.1599998
+        outSlope: 2.1599998
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.41666666
-        value: 1.2
+        value: 1.099
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -279,7 +279,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: GameObject
+    path: Player/GameObject
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -289,7 +289,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: -2
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -298,7 +298,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.083333336
-        value: 0
+        value: -2
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -307,7 +307,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: 0
+        value: -2
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -316,7 +316,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
-        value: 0
+        value: -2
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -325,7 +325,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.33333334
-        value: 0
+        value: -2
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -334,7 +334,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.41666666
-        value: 0
+        value: -2
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -345,7 +345,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: GameObject
+    path: Player/GameObject
     classID: 4
     script: {fileID: 0}
     flags: 0
