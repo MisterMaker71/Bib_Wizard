@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-    [SerializeField]Vector2 range = new Vector2(20, 20);
+    public Vector2 range = new Vector2(20, 20);
     void Start()
     {
         transform.position = new Vector2(Random.Range(-range.x, range.x), Random.Range(-range.y, range.y));
@@ -14,7 +14,7 @@ public class Target : MonoBehaviour
         Destroy(collision.gameObject, 1);
         collision.GetComponent<SpriteRenderer>().enabled = false;
         if(collision.GetComponent<Projectile>() != null);
-        collision.GetComponent<Projectile>().speed=0;
+            collision.GetComponent<Projectile>().speed = 0;
         collision.GetComponentInChildren<ParticleSystem>().Stop();
         transform.position = new Vector2(Random.Range(-range.x, range.x), Random.Range(-range.y, range.y));
 

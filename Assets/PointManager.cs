@@ -5,7 +5,7 @@ using TMPro;
 public class PointManager : MonoBehaviour
 {
     public int points;
-    [SerializeField] TMP_Text pointText;
+    public TMP_Text pointText;
     void Update()
     {
         pointText.text = "Score: " + points;

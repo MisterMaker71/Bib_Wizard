@@ -5,18 +5,18 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 public class Wizard : MonoBehaviour
 {
-    [SerializeField] Transform visualModel;
+    public Transform visualModel;
     public List<MovePoint> layerChange = new List<MovePoint>();
-    [SerializeField] Tilemap map;
-    [SerializeField] Tilemap HightMap;
-    [SerializeField] TileBase Ramp;
+    public Tilemap map;
+    public Tilemap HightMap;
+    public TileBase Ramp;
     public float z = 0;
-    [SerializeField] float MovementSpeed = 5;
+    public float MovementSpeed = 5;
     Vector2 movementVector;
     Animator animator;
-    [SerializeField] GameObject fierball;
-    [SerializeField] Transform wand;
-    //[SerializeField] Transform ffff;
+    public GameObject fierball;
+    public Transform wand;
+    //public Transform ffff;
     public TileBase tileBelowPlayer;
     Vector2 lastMovedir;
     void Start()
@@ -68,7 +68,7 @@ public class Wizard : MonoBehaviour
         /*z =*/
         //print(visualModel.position);
 
-        visualModel.localPosition = Vector3.up * (z + 1.5f);
+        visualModel.localPosition = Vector3.MoveTowards(visualModel.localPosition, Vector3.up * (z + 1.5f), Time.deltaTime);
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");

@@ -4944,6 +4944,7 @@ MonoBehaviour:
   behaviour: 1
   hitObject: {fileID: 1312225454724336800, guid: 5855cb28cf094724fb5cf2f05f71a8ea, type: 3}
   speed: 10
+  homingRadius: 3
   liveTimeAfterHitGround: 1
   hit: 0
 --- !u!95 &3482584740712456157
