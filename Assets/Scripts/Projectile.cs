@@ -46,12 +46,12 @@ public class Projectile : MonoBehaviour
         if (transform.position.z > 0 && !hit)
         {
             hit = true;
-            Instantiate(hitObject, transform.position, hitObject.transform.rotation);
+            Instantiate(hitObject, transform.position - Vector3.forward, hitObject.transform.rotation);
             Destroy(gameObject, liveTimeAfterHitGround);
             moveDir = Vector3.zero;
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponentInChildren<ParticleSystem>().Stop();
-            FindObjectOfType<PointManager>().AddPoints(-2);
+            PointManager.AddPoints(-2);
         }
     }
 }

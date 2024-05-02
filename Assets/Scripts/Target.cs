@@ -19,6 +19,6 @@ public class Target : MonoBehaviour
         transform.position = new Vector2(Random.Range(-range.x, range.x), Random.Range(-range.y, range.y));
 
 
-        FindObjectOfType<PointManager>().AddPoints(1);
+        PointManager.AddPoints(1);
     }
 }

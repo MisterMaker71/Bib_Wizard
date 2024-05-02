@@ -13,7 +13,6 @@ public class Wizard : MonoBehaviour
     public Tilemap HightMap;
     public TileBase Ramp;
     public float z = 0;
-    public float MovementSpeed = 5;
     Vector2 movementVector;
     Animator animator;
     public GameObject fierball;
@@ -22,6 +21,8 @@ public class Wizard : MonoBehaviour
     public TileBase tileBelowPlayer;
     Vector2 lastMovedir;
     PointManager pointManager;
+    float blink;
+    public PlayerStats PlayerStats;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -29,13 +30,15 @@ public class Wizard : MonoBehaviour
     }
     void Update()
     {
-        if(mana < 100)
+        animator.SetFloat("CastingSpeed", PlayerStats.CastingSpeed);
+
+        if (mana < PlayerStats.MaxMana)
             mana += Time.deltaTime * 15;
         else
             mana = 100;
 
-        if (health < 100)
-            health += Time.deltaTime * 5;
+        if (health < PlayerStats.MaxHealth)
+            health += Time.deltaTime * 2.5f;
         else
             health = 100;
 
@@ -91,7 +94,7 @@ public class Wizard : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         //transform.position += (Vector3.right * horizontal + Vector3.up * vertical) * Time.deltaTime * MovementSpeed;
         movementVector = ((Vector3.right * horizontal + Vector3.up * vertical)).normalized;
-        transform.position += new Vector3(movementVector.x, movementVector.y, 0) * Time.deltaTime * MovementSpeed;
+        transform.position += new Vector3(movementVector.x, movementVector.y, 0) * Time.deltaTime * PlayerStats.MovementSpeed;
 
         //print(((Vector3.right * horizontal + Vector3.up * vertical) * Time.deltaTime * MovementSpeed).normalized);
 
@@ -110,10 +113,18 @@ public class Wizard : MonoBehaviour
         //transform.localScale = new Vector3(lastMovedir.x, transform.localScale.y, transform.localScale.z);
 
 
-
+        blink += Time.deltaTime;
         if (animator != null)
         {
             animator.SetBool("move", movementVector != Vector2.zero);
+            if(blink > 1.3f && blink < 2f)
+                animator.SetBool("Blink", true);
+            if(blink > 2)
+            {
+                blink = UnityEngine.Random.RandomRange(-1.0f, 0.0f);
+                animator.SetBool("Blink", false);
+            }
+                
             if (Input.GetMouseButton(0))
             //if (Input.GetKey(KeyCode.Space))
             {
