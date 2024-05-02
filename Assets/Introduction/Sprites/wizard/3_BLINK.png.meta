@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8c7b826eef73b0041b4831bdc43792cc
+guid: 860d37f778cc9d34ca4b2b85f5bee58e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 23
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fire_0
+      name: 3_BLINK_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 23
-        height: 32
+        width: 387
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eda63a022deb7e54b8d72e1c86f63bc1
-      internalID: 1993098283
+      spriteID: 0a85e928fb97ed5408e04d626f098701
+      internalID: 456044161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire_1
+      name: 3_BLINK_1
       rect:
         serializedVersion: 2
-        x: 23
+        x: 387
         y: 0
-        width: 23
-        height: 32
+        width: 387
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 215f97f672974c14ca79edeb2d30ecd5
-      internalID: -1182542893
+      spriteID: f155bbcc7adb55b4787184d93282d2b5
+      internalID: 569837796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire_2
+      name: 3_BLINK_2
       rect:
         serializedVersion: 2
-        x: 46
+        x: 774
         y: 0
-        width: 23
-        height: 32
+        width: 387
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,50 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3457c11ebc631ec4b94678d95c5c5a23
-      internalID: -1254429378
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fire_3
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 0
-        width: 23
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 432483d3131505747a84a2a254f73b38
-      internalID: 249220987
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fire_4
-      rect:
-        serializedVersion: 2
-        x: 92
-        y: 0
-        width: 23
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b9f43872535f4ad46a034c8295622685
-      internalID: 387690413
+      spriteID: aef33f612888ffe44a9d4bf6b339d03f
+      internalID: -1092540849
       vertices: []
       indices: 
       edges: []
@@ -225,11 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fire_0: 1993098283
-      Fire_1: -1182542893
-      Fire_2: -1254429378
-      Fire_3: 249220987
-      Fire_4: 387690413
+      3_BLINK_0: 456044161
+      3_BLINK_1: 569837796
+      3_BLINK_2: -1092540849
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

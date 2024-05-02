@@ -6,6 +6,8 @@ using UnityEngine.Tilemaps;
 public class Wizard : MonoBehaviour
 {
     public Transform visualModel;
+    public float mana = 100;
+    public float health = 100;
     public List<MovePoint> layerChange = new List<MovePoint>();
     public Tilemap map;
     public Tilemap HightMap;
@@ -19,13 +21,28 @@ public class Wizard : MonoBehaviour
     //public Transform ffff;
     public TileBase tileBelowPlayer;
     Vector2 lastMovedir;
+    PointManager pointManager;
     void Start()
     {
         animator = GetComponent<Animator>();
-        
+        pointManager = FindObjectOfType<PointManager>();
     }
     void Update()
     {
+        if(mana < 100)
+            mana += Time.deltaTime * 15;
+        else
+            mana = 100;
+
+        if (health < 100)
+            health += Time.deltaTime * 5;
+        else
+            health = 100;
+
+        pointManager.helth.value = health;
+        pointManager.mana.value = mana;
+
+
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
             if(Camera.main.orthographicSize > 3)
@@ -68,7 +85,7 @@ public class Wizard : MonoBehaviour
         /*z =*/
         //print(visualModel.position);
 
-        visualModel.localPosition = Vector3.MoveTowards(visualModel.localPosition, Vector3.up * (z + 1.5f), Time.deltaTime);
+        visualModel.position = Vector3.MoveTowards(visualModel.position, transform.position + Vector3.up * (z + 1.5f), Time.deltaTime * 10);
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
@@ -131,17 +148,37 @@ public class Wizard : MonoBehaviour
     }
     public void UseSpell()
     {
-        Vector3 look = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        GameObject g = Instantiate(fierball, new Vector3(wand.position.x, wand.position.y, -3), Quaternion.identity);
-        g.transform.LookAt(new Vector3(look.x, look.y, 0));
-        g.transform.Rotate(new Vector3(0, 90, 180));
-        Destroy(g, 10);
+        float m = 0;
+        switch (fierball.GetComponent<Projectile>().effect)
+        {
+            case ProjectileEffect.damage:
+                m = 10;
+                break;
+            case ProjectileEffect.fire:
+                m = 15;
+                break;
+            case ProjectileEffect.explosion:
+                m = 25;
+                break;
+            case ProjectileEffect.stun:
+                m = 20;
+                break;
+        }
+        if (Input.GetMouseButton(0) && mana > m)
+        {
+            mana -= m;
+            Vector3 look = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            GameObject g = Instantiate(fierball, new Vector3(wand.position.x, wand.position.y, -3), Quaternion.identity);
+            g.transform.LookAt(new Vector3(look.x, look.y, 0));
+            g.transform.Rotate(new Vector3(0, 90, 180));
+            Destroy(g, 10);
 
-        //GameObject g = Instantiate(fierball, new Vector3(wand.position.x, wand.position.y, -3), Quaternion.identity);
-        //g.transform.right = lastMovedir;
-        //Destroy(g, 10);
+            //GameObject g = Instantiate(fierball, new Vector3(wand.position.x, wand.position.y, -3), Quaternion.identity);
+            //g.transform.right = lastMovedir;
+            //Destroy(g, 10);}
+        }
     }
-    [System.Serializable]
+        [System.Serializable]
     public class MovePoint
     {
         public bool up;
