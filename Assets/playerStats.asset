@@ -12,3 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a492eff259c6540bc94fc9ca1c65d8, type: 3}
   m_Name: playerStats
   m_EditorClassIdentifier: 
+  MaxMana: 50
+  MaxHealth: 100
+  MovementSpeed: 5
+  CastingSpeed: 1
+  Damage: 2
+  ManaRegen: 15
+  HealthRegen: 2.5
+  XpMilestones:
+  - 5
+  - 10
+  - 20
+  - 35
+  - 50

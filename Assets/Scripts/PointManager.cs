@@ -20,5 +20,7 @@ public class PointManager : MonoBehaviour
     public static void AddPoints(int Pints)
     {
         points += Pints;
+        Wizard.AddXp(Random.Range(3, 5));
+        Wizard.wizard.PlayerStats.TryLevelUp();
     }
 }

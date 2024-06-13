@@ -32,7 +32,7 @@ public class Projectile : MonoBehaviour
             {
                 if(Vector3.Distance(target.transform.position, transform.position) < homingRadius)
                 {
-                    print(target);
+                    //print(target);
                     transform.LookAt(target.transform);
                     moveDir = transform.forward;
                     transform.right = new Vector3(transform.forward.x, transform.forward.y, 0);

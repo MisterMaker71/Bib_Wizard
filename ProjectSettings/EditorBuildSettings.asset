@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: d1cfdf807ef87344d9cce65217246f25
+  - enabled: 1
+    path: Assets/Scenes/wizard.unity
+    guid: 672d5a8d3051b38468ec624deacba86b
+  - enabled: 1
+    path: Assets/Scenes/wizard 3D.unity
+    guid: 1382239a49341d045b01e3634bca7369
   m_configObjects: {}

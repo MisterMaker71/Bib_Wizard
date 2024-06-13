@@ -13,12 +13,13 @@ public class Target : MonoBehaviour
     {
         Destroy(collision.gameObject, 1);
         collision.GetComponent<SpriteRenderer>().enabled = false;
-        if(collision.GetComponent<Projectile>() != null);
+        if(collision.GetComponent<Projectile>() != null)
             collision.GetComponent<Projectile>().speed = 0;
         collision.GetComponentInChildren<ParticleSystem>().Stop();
         transform.position = new Vector2(Random.Range(-range.x, range.x), Random.Range(-range.y, range.y));
 
 
         PointManager.AddPoints(1);
+        Wizard.AddXp(Random.Range(1, 3+1));
     }
 }
