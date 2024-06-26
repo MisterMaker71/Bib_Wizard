@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2699691855665133939}
   - component: {fileID: 2116188490123505004}
   - component: {fileID: 2568456232034643123}
-  - component: {fileID: -7496031184604502253}
+  - component: {fileID: 8324954574830318559}
   m_Layer: 0
   m_Name: Tree1
   m_TagString: Untagged
@@ -95,8 +95,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-7496031184604502253
-MeshCollider:
+--- !u!136 &8324954574830318559
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -113,10 +113,11 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4063781668356598211}
+  serializedVersion: 2
+  m_Radius: 0.35688317
+  m_Height: 6.1058307
+  m_Direction: 1
+  m_Center: {x: -0.0019935668, y: 2.8529155, z: -0.27837753}
 --- !u!114 &-5360700045412363882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20758,7 +20759,7 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}

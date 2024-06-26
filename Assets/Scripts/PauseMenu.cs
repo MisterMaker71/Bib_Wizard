@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
+    private bool cursorLocked;
     [SerializeField]GameObject pauseMenu;
     private void Update()
     {
@@ -14,6 +15,7 @@ public class PauseMenu : MonoBehaviour
     }
     void Start()
     {
+        cursorLocked = Cursor.lockState == CursorLockMode.Locked;
         SetPause(false);
     }
     public void TogglePause()
@@ -25,11 +27,15 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(paused);
         if(paused)
         {
+            Cursor.lockState = CursorLockMode.Confined;
             Time.timeScale = 0;
         }
         else
         {
+            if (cursorLocked)
+                Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1;
         }
     }
+
 }

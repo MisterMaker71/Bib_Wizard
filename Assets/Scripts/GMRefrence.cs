@@ -8,7 +8,10 @@ public class GMRefrence : MonoBehaviour
     public GameManager gm;
     void Start()
     {
-        gm = FindFirstObjectByType<GameManager>();
+        if (GameManager.gameManager != null)
+            gm = GameManager.gameManager;
+        else
+            gm = FindFirstObjectByType<GameManager>();
     }
     public void GoToGame(bool newGame)
     {
@@ -24,5 +27,10 @@ public class GMRefrence : MonoBehaviour
     {
         if (gm != null)
             gm.Quit();
+    }
+    public void GoTo3D()
+    {
+        if (gm != null)
+            gm.GoTo3D();
     }
 }

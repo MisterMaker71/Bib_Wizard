@@ -6,9 +6,8 @@ using System.IO;
 
 public class GameManager : MonoBehaviour
 {
-    public enum GameState { inMenu, inGame, paused}
-    public GameState state2 = GameState.inMenu;
-    public string state = "inTitle";
+    public enum GameState { inMenu, inGame, In3D}
+    public GameState state = GameState.inMenu;
     public static GameManager gameManager;
     bool newGame = false;
 
@@ -25,13 +24,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (state2)
+        switch (state)
         {
             case GameState.inMenu:
                 if (Input.GetKeyDown(KeyCode.Escape))
                     Quit();
                 break;
             case GameState.inGame:
+            case GameState.In3D:
                 if (Input.GetKeyDown(KeyCode.Tab))
                     GoToMenu();
                 if (Input.GetKeyDown(KeyCode.Escape))
@@ -42,16 +42,19 @@ public class GameManager : MonoBehaviour
     public void GoToGame(bool NewSave)
     {
         SceneManager.LoadScene("wizard");
-        state = "inGame";
-        state2 = GameState.inGame;
+        state = GameState.inGame;
         newGame = NewSave;
+    }
+    public void GoTo3D()
+    {
+        SceneManager.LoadScene("wizard 3D");
+        state = GameState.In3D;
     }
     public void GoToMenu()
     {
         SceneManager.LoadScene("Menu");
         Save("Save1");
-        state = "inMenu";
-        state2 = GameState.inMenu;
+        state = GameState.inMenu;
     }
     public void Quit()
     {
@@ -142,7 +145,7 @@ public class GameManager : MonoBehaviour
     }
     private void OnLevelWasLoaded(int level)
     {
-        if (state2 == GameState.inGame)
+        if (state == GameState.inGame)
             Load("Save1", newGame);
         newGame = false;
     }

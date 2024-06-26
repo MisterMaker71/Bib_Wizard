@@ -8,9 +8,12 @@ public class PlayerController : MonoBehaviour
 {
     public float MovementSpeed = 5;
     public float JumpPower = 2.5f;
+    [Min(0)]
+    public float gravetyMultyplyer = 1;
     public static CharacterController controller;
     public LayerMask GroundLayer;
     //public Rigidbody rb;
+    [HideInInspector]
     public Vector3 velocity;
     public float mouseSensebility = 100f;
     Vector3 beforPosition = new Vector3(0, 0, 0);
@@ -45,6 +48,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Player == null)
+            Player = gameObject;
+        if(controller == null)
+            controller = GetComponent<CharacterController>();
+
         float mouseX = Input.GetAxis("Mouse X") * mouseSensebility * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensebility * Time.deltaTime;
 
@@ -122,7 +130,7 @@ public class PlayerController : MonoBehaviour
         }
         needToJump -= Time.deltaTime;
 
-        velocity += Physics.gravity / 50;
+        velocity += (Physics.gravity / 50) * gravetyMultyplyer;
 
         if(!IsGrounded())
         {
@@ -144,7 +152,7 @@ public class PlayerController : MonoBehaviour
     public bool IsGrounded()
     {
         //if (Physics.Raycast(transform.position, Vector3.down, 0.2f, GroundLayer))
-        if (Physics.CheckSphere(transform.position, 0.3f, GroundLayer))
+        if (Physics.CheckSphere(transform.position + Vector3.up * 0.25f, 0.4f, GroundLayer))
         {
             Debug.DrawLine(transform.position, transform.position + Vector3.down * 0.3f, Color.green, 10);
             return true;
@@ -159,5 +167,14 @@ public class PlayerController : MonoBehaviour
 
             return false;
         }
+    }
+    private void OnDrawGizmos()
+    {
+        if (IsGrounded()) { 
+            print("groundet");
+        Gizmos.color = Color.green; }
+        else
+            Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position + Vector3.up * 0.25f, 0.4f);
     }
 }
