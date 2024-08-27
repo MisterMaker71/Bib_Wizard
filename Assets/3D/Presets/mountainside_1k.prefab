@@ -102,7 +102,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e0ea5e70c5e0fda4aa50d44814594c4c, type: 2}
     - target: {fileID: 4742473837712756890, guid: 1e7180effc9f08344b2ef7fb2d8477ed, type: 3}
       propertyPath: m_Size
-      value: 42.9
+      value: 12.25
       objectReference: {fileID: 0}
     - target: {fileID: 4742473837712756890, guid: 1e7180effc9f08344b2ef7fb2d8477ed, type: 3}
       propertyPath: m_LocalReferencePoint.x
@@ -118,36 +118,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4742473837712756890, guid: 1e7180effc9f08344b2ef7fb2d8477ed, type: 3}
       propertyPath: m_LODs.Array.data[0].screenRelativeHeight
-      value: 0.9862694
+      value: 0.8825519
       objectReference: {fileID: 0}
     - target: {fileID: 4742473837712756890, guid: 1e7180effc9f08344b2ef7fb2d8477ed, type: 3}
       propertyPath: m_LODs.Array.data[1].screenRelativeHeight
-      value: 0.73670185
+      value: 0.6587672
       objectReference: {fileID: 0}
     - target: {fileID: 4742473837712756890, guid: 1e7180effc9f08344b2ef7fb2d8477ed, type: 3}
       propertyPath: m_LODs.Array.data[2].screenRelativeHeight
-      value: 0.5054549
+      value: 0.4537203
       objectReference: {fileID: 0}
     - target: {fileID: 4742473837712756890, guid: 1e7180effc9f08344b2ef7fb2d8477ed, type: 3}
       propertyPath: m_LODs.Array.data[3].screenRelativeHeight
-      value: 0.25455198
+      value: 0.11440904
       objectReference: {fileID: 0}
     - target: {fileID: 4742473837712756890, guid: 1e7180effc9f08344b2ef7fb2d8477ed, type: 3}
       propertyPath: m_LODs.Array.data[0].renderers.Array.data[0].renderer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7287041938370463240}
     - target: {fileID: 4742473837712756890, guid: 1e7180effc9f08344b2ef7fb2d8477ed, type: 3}
       propertyPath: m_LODs.Array.data[1].renderers.Array.data[0].renderer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 41165398942353723}
     - target: {fileID: 4742473837712756890, guid: 1e7180effc9f08344b2ef7fb2d8477ed, type: 3}
       propertyPath: m_LODs.Array.data[2].renderers.Array.data[0].renderer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4210363870500182477}
     - target: {fileID: 4742473837712756890, guid: 1e7180effc9f08344b2ef7fb2d8477ed, type: 3}
       propertyPath: m_LODs.Array.data[3].renderers.Array.data[0].renderer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4831289896456168194}
     - target: {fileID: 8075250343651917176, guid: 1e7180effc9f08344b2ef7fb2d8477ed, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -160,6 +160,26 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1356149763490889349}
   m_SourcePrefab: {fileID: 100100000, guid: 1e7180effc9f08344b2ef7fb2d8477ed, type: 3}
+--- !u!23 &41165398942353723 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -9041959338185477719, guid: 1e7180effc9f08344b2ef7fb2d8477ed, type: 3}
+  m_PrefabInstance: {fileID: 150516910668298386}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4210363870500182477 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4069153947839881567, guid: 1e7180effc9f08344b2ef7fb2d8477ed, type: 3}
+  m_PrefabInstance: {fileID: 150516910668298386}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4831289896456168194 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4691218940568181648, guid: 1e7180effc9f08344b2ef7fb2d8477ed, type: 3}
+  m_PrefabInstance: {fileID: 150516910668298386}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &7287041938370463240 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -1786107857505042790, guid: 1e7180effc9f08344b2ef7fb2d8477ed, type: 3}
+  m_PrefabInstance: {fileID: 150516910668298386}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7311435924574341230 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1773909826039303940, guid: 1e7180effc9f08344b2ef7fb2d8477ed, type: 3}

@@ -5,16 +5,24 @@ using UnityEngine.AI;
 
 public enum EnemyState { Idle, Wander, Searching, Chase, Swimming}
 [RequireComponent(typeof(NavMeshAgent))]
-public class Enemy : MonoBehaviour
+public class Enemy : Savebel
 {
-    public Vector3 HomePoint;
+    [HideInInspector] public Vector3 HomePoint;
     float searchingTimer = 0;
-    public Vector3 searchingPoint;
+    [HideInInspector] public Vector3 searchingPoint;
     public EnemyState state;
     NavMeshAgent agent;
     [SerializeField] float maxViewDistance = 25f;
     [SerializeField] LayerMask viewLayer;
     [SerializeField] float WanderAndSearchDistance = 10;
+
+    public Enemy(Savebel savebel) : base(savebel)
+    {
+
+    }
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -109,5 +117,14 @@ public class Enemy : MonoBehaviour
             return hit.point;
         }
         return pos;
+    }
+    public override void Load(Savebel savebel)
+    {
+        Enemy save = (Enemy)savebel;
+        state = save.state;
+        HomePoint = save.HomePoint;
+        searchingPoint = save.searchingPoint;
+
+        transform.position = save.transform.position;
     }
 }

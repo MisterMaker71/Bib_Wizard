@@ -6,14 +6,18 @@ using UnityEngine;
 //[RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField]
+    Animator animator;
+
     public float MovementSpeed = 5;
+    public float RunSpeed = 5;
     public float JumpPower = 2.5f;
     [Min(0)]
     public float gravetyMultyplyer = 1;
     public static CharacterController controller;
     public LayerMask GroundLayer;
     //public Rigidbody rb;
-    [HideInInspector]
+    //[HideInInspector]
     public Vector3 velocity;
     public float mouseSensebility = 100f;
     Vector3 beforPosition = new Vector3(0, 0, 0);
@@ -36,6 +40,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         beforPosition = transform.position;
         controller = GetComponent<CharacterController>();
         //rb = GetComponent<Rigidbody>();
@@ -98,7 +103,14 @@ public class PlayerController : MonoBehaviour
 
 
         if (CanMove)
-            controller.Move(transform.right * InputVector.x * Time.deltaTime * MovementSpeed + transform.forward * InputVector.z * MovementSpeed * Time.deltaTime + Vector3.up * velocity.y * Time.deltaTime);
+        {
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+                controller.Move(transform.right * InputVector.x * Time.deltaTime * RunSpeed + transform.forward * InputVector.z * RunSpeed * Time.deltaTime + Vector3.up * velocity.y * Time.deltaTime);
+            else
+                controller.Move(transform.right * InputVector.x * Time.deltaTime * MovementSpeed + transform.forward * InputVector.z * MovementSpeed * Time.deltaTime + Vector3.up * velocity.y * Time.deltaTime);
+        }
+        if (animator != null)
+            animator.SetFloat("Speed", controller.velocity.magnitude);
 
         Vector3 colo = Vector3.Normalize(new Vector3(transform.position.x - beforPosition.x, transform.position.y - beforPosition.y, transform.position.z - beforPosition.z) + (Vector3.one * 0.5f));
         Debug.DrawLine(beforPosition, transform.position, new Color(colo.x, colo.y, colo.z), 10);
@@ -170,9 +182,8 @@ public class PlayerController : MonoBehaviour
     }
     private void OnDrawGizmos()
     {
-        if (IsGrounded()) { 
-            print("groundet");
-        Gizmos.color = Color.green; }
+        if (IsGrounded())
+            Gizmos.color = Color.green;
         else
             Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position + Vector3.up * 0.25f, 0.4f);

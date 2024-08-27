@@ -3,7 +3,12 @@ guid: c069414322605864fbaeed99a874d4c0
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: coast_rocks_05
+    second: {fileID: 2100000, guid: 6a50642f75b74ab4a9f2f7fb5f51c909, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -38,6 +43,7 @@ ModelImporter:
     - 0.25
     - 0.125
     - 0.0625
+    - 0.03125
     - 0.01
     globalScale: 1
     meshCompression: 0

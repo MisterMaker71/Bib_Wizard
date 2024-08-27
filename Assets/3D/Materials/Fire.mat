@@ -27,9 +27,9 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _Flame_hight: 0.37
-    - _Min_alpha: 0
-    - _falloff: 1
+    - _Flame_hight: 0.21
+    - _Min_alpha: 0.063
+    - _falloff: 2.45
     m_Colors:
     - _Color: {r: 0.9764706, g: 0.3198564, b: 0, a: 0}
   m_BuildTextureStacks: []
